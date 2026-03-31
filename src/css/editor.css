@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  font-family: "Geist", sans-serif;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+#editor {
+  font-family: "Cascadia Code", sans-serif;
+  width: 570px;
+  border: solid 1px #dedede;
+  height: 650px;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  margin-top: 150px;
+}
+.logo {
+  font-weight: 400;
+  font-size: 35px;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1.79);
+}
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 9999;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+.load-bar {
+  width: 190px;
+  position: relative;
+  overflow: hidden;
+  height: 4px;
+  background-color: #afafafd2;
+  border-radius: 1em;
+}
+.bar {
+  width: 0%;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  animation: 3s loading linear;
+  background-color: #fff;
+  height: 100%;
+}
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  70% {
+    width: 58%;
+  }
+  90% {
+    width: 80%;
+  }
+  95% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.logo2 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 35px;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1.79);
+}
+.logo:hover {
+  transform: scale(1.2);
+  letter-spacing: 1px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+a:hover {
+  color: #006eff;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-family: "Geist", sans-serif;
+  height: 70px;
+  border-bottom: solid 1px #dedede;
+}
+nav ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+nav ul li button {
+  width: 100px;
+  height: 29px;
+}
+button {
+  border: solid 2px #000;
+  color: #000;
+  transition: 0.3s;
+  border-radius: 0.5em;
+  background-color: transparent;
+}
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+button:active {
+  transform: scale(1.1);
+}
+#console {
+  font-family: "Cascadia Code", sans-serif;
+  width: 570px;
+  border: solid 1px #dedede;
+  height: 650px;
+  border-left: none;
+  position: relative;
+  background-color: #f8f8f8;
+  outline: none;
+  margin-top: 150px;
+}
+.header {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  padding: 0.5em;
+  position: static;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 20px;
+  border-bottom: solid 1px #dedede;
+}
